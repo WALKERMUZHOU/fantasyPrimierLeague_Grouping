@@ -37,7 +37,7 @@
     [self.view endEditing:YES];
     
     if (!self.rowCount.text || self.rowCount.text.integerValue == 0) {
-        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"请输入行数" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"请输入队伍数量" message:nil preferredStyle:UIAlertControllerStyleAlert];
         [self.navigationController presentViewController:alertVC animated:YES completion:^{
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [alertVC dismissViewControllerAnimated:YES completion:nil];
@@ -47,7 +47,7 @@
     }
     
     if (!self.listCount.text || self.listCount.text.integerValue == 0) {
-        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"请输入列数" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"请输入每组人数" message:nil preferredStyle:UIAlertControllerStyleAlert];
         [self.navigationController presentViewController:alertVC animated:YES completion:^{
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [alertVC dismissViewControllerAnimated:YES completion:nil];
@@ -57,8 +57,8 @@
     }
     
     CalculateVCViewController *calcuVC = [[CalculateVCViewController alloc]init];
-    calcuVC.rowCount = self.listCount.text.integerValue;
-    calcuVC.listCount = self.rowCount.text.integerValue;
+    calcuVC.teamCount = self.rowCount.text.integerValue;
+    calcuVC.perTeamCount = self.listCount.text.integerValue;
     [self.navigationController pushViewController:calcuVC animated:YES];
     
 }

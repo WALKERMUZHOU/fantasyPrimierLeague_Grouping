@@ -10,8 +10,8 @@
 
 @interface CalculateVCViewController : UIViewController
 
-@property (nonatomic, assign) NSInteger rowCount;
+@property (nonatomic, assign) NSInteger teamCount;
 
-@property (nonatomic, assign) NSInteger listCount;
+@property (nonatomic, assign) NSInteger perTeamCount;
 
 @end

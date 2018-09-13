@@ -27,37 +27,37 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"分组";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"开始分组" style:UIBarButtonItemStyleDone target:self action:@selector(groupClick:)];
-    self.dataArray = [NSMutableArray arrayWithCapacity:self.rowCount];
+    self.dataArray = [NSMutableArray arrayWithCapacity:self.perTeamCount];
 }
 
 - (void)createUI{
-    for (NSInteger i = 0; i < self.rowCount; i++) {
-        NSMutableArray *array = [NSMutableArray arrayWithCapacity:self.listCount];
+    for (NSInteger i = 0; i < self.perTeamCount; i++) {
+        NSMutableArray *array = [NSMutableArray arrayWithCapacity:self.teamCount];
         
         CGFloat Width = self.view.bounds.size.width;
-        CGFloat Height = self.view.bounds.size.height;
         CGFloat gap = 10;
-        CGFloat buttonW = (Width - gap * (self.rowCount + 1))/self.rowCount;
-        CGFloat buttonH = 60;
-        for (NSInteger j= 0; j < self.listCount; j++) {
+        CGFloat textFieldW = (Width - gap * (self.teamCount + 1))/self.teamCount;
+        CGFloat textFieldH = 60;
+        for (NSInteger j= 0; j < self.teamCount; j++) {
             
             if(i == 0){
-                UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(gap + j*(buttonW+gap),64 + gap + i*(buttonH + gap), buttonW, buttonH)];
+                UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(gap + j*(textFieldW+gap),64 + gap + i*(textFieldH + gap), textFieldW, textFieldH)];
                 label.text = [NSString stringWithFormat:@"第%ld组",j+1];
                 label.textAlignment = NSTextAlignmentCenter;
                 [self.view addSubview:label];
             }
             
-            
-            UITextField *textfiled = [[UITextField alloc]initWithFrame:CGRectMake(gap + j*(buttonW+gap),buttonH + 64 + gap + i*(buttonH + gap), buttonW, buttonH)];
+            UITextField *textfiled = [[UITextField alloc]initWithFrame:CGRectMake(gap + j*(textFieldW+gap),textFieldH + 64 + gap + i*(textFieldH + gap), textFieldW, textFieldH)];
             textfiled.textAlignment = NSTextAlignmentCenter;
-            textfiled.placeholder = [NSString stringWithFormat:@"%ld",self.rowCount *i + j + 1];
-            textfiled.backgroundColor = [UIColor lightGrayColor];
-            [self.view addSubview:textfiled];
-            [array addObject:textfiled];
-            
+            textfiled.placeholder = [NSString stringWithFormat:@"%ld",self.teamCount *i + j + 1];
+            textfiled.backgroundColor = [UIColor blackColor];
+            textfiled.textColor = [UIColor whiteColor];
             textfiled.layer.cornerRadius = 4;
             textfiled.clipsToBounds = YES;
+            [textfiled setValue:[UIColor lightGrayColor] forKeyPath:@"_placeholderLabel.textColor"];
+
+            [self.view addSubview:textfiled];
+            [array addObject:textfiled];
         }
         [self.dataArray addObject:array];
     }
@@ -77,19 +77,21 @@
         NSArray *array = [self.dataArray objectAtIndex:i];
         NSArray *titleArray = [self getNameArray:array];
         NSArray *dividedArray = [self dividedArray:titleArray];
-        for (NSInteger j = 0; j < array.count; j++) {
-            UITextField *button = [array objectAtIndex:j];
-            NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
-                NSInteger random = arc4random()%self.dataArray.count;
-                button.text = [NSString stringWithFormat:@"%@",titleArray[random]];
-            }];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((j*0.5 + 1)* NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [timer invalidate];
-                button.text = [NSString stringWithFormat:@"%@",dividedArray[j]];
-            });
-        }
 
         
+            for (NSInteger j = 0; j < array.count; j++) {
+                if (i == 0) break;
+                
+                UITextField *textField = [array objectAtIndex:j];
+                NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+                    NSInteger random = arc4random()%self.dataArray.count;
+                    textField.text = [NSString stringWithFormat:@"%@",titleArray[random]];
+                }];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((i*1 + j*0.9 + 1)* NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [timer invalidate];
+                    textField.text = [NSString stringWithFormat:@"%@",dividedArray[j]];
+                });
+            }
     }
     
 }
@@ -97,8 +99,12 @@
 - (NSArray *)getNameArray:(NSArray *)array{
     NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:array.count];
     for (NSInteger i = 0; i<array.count; i++) {
-        UITextField *button = [array objectAtIndex:i];
-        [tempArray addObject:button.text];
+        UITextField *textField = [array objectAtIndex:i];
+        if (!textField.text || [textField.text isEqualToString:@""]) {
+            [tempArray addObject:textField.placeholder];
+        }else{
+            [tempArray addObject:textField.text];
+        }
     }
     return tempArray;
 }
