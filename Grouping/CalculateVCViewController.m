@@ -87,7 +87,7 @@
                     NSInteger random = arc4random()%self.dataArray.count;
                     textField.text = [NSString stringWithFormat:@"%@",titleArray[random]];
                 }];
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((i*1 + j*0.9 + 1)* NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((i*3 + j*0.5 + 1)* NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [timer invalidate];
                     textField.text = [NSString stringWithFormat:@"%@",dividedArray[j]];
                 });

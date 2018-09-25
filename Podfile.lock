@@ -1,0 +1,61 @@
+PODS:
+  - DSCategories (0.1.4):
+    - DSCategories/NSArray (= 0.1.4)
+    - DSCategories/NSData (= 0.1.4)
+    - DSCategories/NSDictionary (= 0.1.4)
+    - DSCategories/NSString (= 0.1.4)
+    - DSCategories/NSUserDefaults (= 0.1.4)
+    - DSCategories/UIButton (= 0.1.4)
+    - DSCategories/UIColor (= 0.1.4)
+    - DSCategories/UIImage (= 0.1.4)
+    - DSCategories/UITextView (= 0.1.4)
+    - DSCategories/UIView (= 0.1.4)
+    - DSCategories/UIViewController (= 0.1.4)
+  - DSCategories/NSArray (0.1.4)
+  - DSCategories/NSData (0.1.4)
+  - DSCategories/NSDictionary (0.1.4)
+  - DSCategories/NSString (0.1.4)
+  - DSCategories/NSUserDefaults (0.1.4)
+  - DSCategories/UIButton (0.1.4)
+  - DSCategories/UIColor (0.1.4)
+  - DSCategories/UIImage (0.1.4)
+  - DSCategories/UITextView (0.1.4)
+  - DSCategories/UIView (0.1.4)
+  - DSCategories/UIViewController (0.1.4)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.0.0)
+  - MJRefresh (3.1.15.6)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - DSCategories (= 0.1.4)
+  - Masonry (~> 1.1.0)
+  - MBProgressHUD (~> 1.0.0)
+  - MJRefresh (~> 3.1.15)
+  - SDWebImage (= 4.4.2)
+  - YYModel (= 1.0.4)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - SDWebImage
+    - YYModel
+  https://github.com/walkdianzi/DSSpecs.git:
+    - DSCategories
+
+SPEC CHECKSUMS:
+  DSCategories: d418e9c817b6aa075cfac4aad54f3ab24bb5fb5e
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJRefresh: 0efa19656679d70a0f47cbe76e56c2271fe53a97
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: 81ca19a58c9470577c2826ae83fc57180e3e91bb
+
+COCOAPODS: 1.5.3
