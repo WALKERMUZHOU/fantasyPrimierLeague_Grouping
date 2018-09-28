@@ -7,6 +7,7 @@
 //
 
 #import "CalculateVCViewController.h"
+#import "CalculateModel.h"
 
 @interface CalculateVCViewController ()
 
@@ -26,7 +27,9 @@
 - (void)initData{
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"分组";
+    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"开始分组" style:UIBarButtonItemStyleDone target:self action:@selector(groupClick:)];
+    self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc]initWithTitle:@"开始分组" style:UIBarButtonItemStyleDone target:self action:@selector(groupClick:)]];
     self.dataArray = [NSMutableArray arrayWithCapacity:self.perTeamCount];
 }
 
@@ -73,12 +76,12 @@
 - (void)groupClick:(UIButton *)sender{
     [self.view endEditing:YES];
     
+    NSMutableArray *dataArray = [NSMutableArray array];
     for (NSInteger i= 0; i < self.dataArray.count; i++) {
         NSArray *array = [self.dataArray objectAtIndex:i];
         NSArray *titleArray = [self getNameArray:array];
-        NSArray *dividedArray = [self dividedArray:titleArray];
-
-        
+        NSArray *dividedArray = [self dividedArray:titleArray andGroupIndex:i];
+        [dataArray addObject:dividedArray];
             for (NSInteger j = 0; j < array.count; j++) {
                 if (i == 0) break;
                 
@@ -93,6 +96,7 @@
                 });
             }
     }
+    self.dataArray = dataArray;
     
 }
 
@@ -109,13 +113,18 @@
     return tempArray;
 }
 
-- (NSArray *)dividedArray:(NSArray *)array{
+//分组
+- (NSArray *)dividedArray:(NSArray *)array andGroupIndex:(NSInteger)groupIndex{
     NSMutableArray *tempArray = [NSMutableArray arrayWithArray:array];
     NSMutableArray *dividedArray = [NSMutableArray arrayWithCapacity:array.count];
     for (NSInteger i = 0; i< array.count; i++) {
         NSInteger index = arc4random()%(array.count - i);
-        [dividedArray addObject:tempArray[index]];
+        CalculateModel *model = [[CalculateModel alloc]init];
+        model.groupId = index;
+        model.name = tempArray[index];
+        [dividedArray addObject:model];
         [tempArray removeObjectAtIndex:index];
+        
     }
     return dividedArray;
 }
