@@ -15,7 +15,7 @@
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [aCoder encodeObject:self.name forKey:@"name"];
     [aCoder encodeObject:self.grade forKey:@"grade"];
-    [aCoder encodeInteger:self.groupId forKey:@"groupId"]
+    [aCoder encodeInteger:self.groupId forKey:@"groupId"];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
