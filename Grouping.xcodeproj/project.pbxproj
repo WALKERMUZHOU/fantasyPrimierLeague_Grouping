@@ -17,7 +17,10 @@
 		5E12C6C82148BC6600650C8A /* GroupingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E12C6C72148BC6600650C8A /* GroupingTests.m */; };
 		5E12C6D32148BC6600650C8A /* GroupingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E12C6D22148BC6600650C8A /* GroupingUITests.m */; };
 		5E12C6E22148C18B00650C8A /* CalculateVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E12C6E12148C18B00650C8A /* CalculateVCViewController.m */; };
-		5E37FA32215B81A9004D95FE /* CalculateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E37FA31215B81A9004D95FE /* CalculateModel.m */; };
+		5EA07CBD216B427E0090E842 /* CalculateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CB8216B427E0090E842 /* CalculateModel.m */; };
+		5EA07CBE216B427E0090E842 /* MMGroupingDateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CB9216B427E0090E842 /* MMGroupingDateModel.m */; };
+		5EA07CBF216B427E0090E842 /* MMGroupingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CBA216B427E0090E842 /* MMGroupingModel.m */; };
+		5EA07CC3216B434E0090E842 /* MMBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CC2216B434E0090E842 /* MMBaseModel.m */; };
 		5EF5D03C215E193A00ECAB15 /* CalculateStoreDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5D03B215E193A00ECAB15 /* CalculateStoreDataTool.m */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +60,14 @@
 		5E12C6D42148BC6600650C8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E12C6E02148C18B00650C8A /* CalculateVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculateVCViewController.h; sourceTree = "<group>"; };
 		5E12C6E12148C18B00650C8A /* CalculateVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculateVCViewController.m; sourceTree = "<group>"; };
-		5E37FA30215B81A9004D95FE /* CalculateModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculateModel.h; sourceTree = "<group>"; };
-		5E37FA31215B81A9004D95FE /* CalculateModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculateModel.m; sourceTree = "<group>"; };
+		5EA07CB7216B427E0090E842 /* MMGroupingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMGroupingModel.h; sourceTree = "<group>"; };
+		5EA07CB8216B427E0090E842 /* CalculateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateModel.m; sourceTree = "<group>"; };
+		5EA07CB9216B427E0090E842 /* MMGroupingDateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMGroupingDateModel.m; sourceTree = "<group>"; };
+		5EA07CBA216B427E0090E842 /* MMGroupingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMGroupingModel.m; sourceTree = "<group>"; };
+		5EA07CBB216B427E0090E842 /* MMGroupingDateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMGroupingDateModel.h; sourceTree = "<group>"; };
+		5EA07CBC216B427E0090E842 /* CalculateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateModel.h; sourceTree = "<group>"; };
+		5EA07CC1216B434E0090E842 /* MMBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMBaseModel.h; sourceTree = "<group>"; };
+		5EA07CC2216B434E0090E842 /* MMBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMBaseModel.m; sourceTree = "<group>"; };
 		5EF5D03A215E193A00ECAB15 /* CalculateStoreDataTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculateStoreDataTool.h; sourceTree = "<group>"; };
 		5EF5D03B215E193A00ECAB15 /* CalculateStoreDataTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculateStoreDataTool.m; sourceTree = "<group>"; };
 		7D19B861A2E799780D384BBB /* Pods-Grouping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grouping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grouping/Pods-Grouping.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,14 +126,14 @@
 		5E12C6AD2148BC6300650C8A /* Grouping */ = {
 			isa = PBXGroup;
 			children = (
+				5EA07CC0216B43400090E842 /* BaseObject */,
+				5EA07CB6216B427E0090E842 /* GroupModel */,
 				5E12C6AE2148BC6300650C8A /* AppDelegate.h */,
 				5E12C6AF2148BC6300650C8A /* AppDelegate.m */,
 				5E12C6B12148BC6300650C8A /* ViewController.h */,
 				5E12C6B22148BC6300650C8A /* ViewController.m */,
 				5E12C6E02148C18B00650C8A /* CalculateVCViewController.h */,
 				5E12C6E12148C18B00650C8A /* CalculateVCViewController.m */,
-				5E37FA30215B81A9004D95FE /* CalculateModel.h */,
-				5E37FA31215B81A9004D95FE /* CalculateModel.m */,
 				5EF5D03A215E193A00ECAB15 /* CalculateStoreDataTool.h */,
 				5EF5D03B215E193A00ECAB15 /* CalculateStoreDataTool.m */,
 				5E12C6B42148BC6300650C8A /* Main.storyboard */,
@@ -152,6 +161,28 @@
 				5E12C6D42148BC6600650C8A /* Info.plist */,
 			);
 			path = GroupingUITests;
+			sourceTree = "<group>";
+		};
+		5EA07CB6216B427E0090E842 /* GroupModel */ = {
+			isa = PBXGroup;
+			children = (
+				5EA07CB7216B427E0090E842 /* MMGroupingModel.h */,
+				5EA07CBA216B427E0090E842 /* MMGroupingModel.m */,
+				5EA07CBB216B427E0090E842 /* MMGroupingDateModel.h */,
+				5EA07CB9216B427E0090E842 /* MMGroupingDateModel.m */,
+				5EA07CBC216B427E0090E842 /* CalculateModel.h */,
+				5EA07CB8216B427E0090E842 /* CalculateModel.m */,
+			);
+			path = GroupModel;
+			sourceTree = "<group>";
+		};
+		5EA07CC0216B43400090E842 /* BaseObject */ = {
+			isa = PBXGroup;
+			children = (
+				5EA07CC1216B434E0090E842 /* MMBaseModel.h */,
+				5EA07CC2216B434E0090E842 /* MMBaseModel.m */,
+			);
+			path = BaseObject;
 			sourceTree = "<group>";
 		};
 		AE3F3B1E93734FFD5098B524 /* Pods */ = {
@@ -360,11 +391,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA07CBE216B427E0090E842 /* MMGroupingDateModel.m in Sources */,
+				5EA07CC3216B434E0090E842 /* MMBaseModel.m in Sources */,
+				5EA07CBD216B427E0090E842 /* CalculateModel.m in Sources */,
+				5EA07CBF216B427E0090E842 /* MMGroupingModel.m in Sources */,
 				5EF5D03C215E193A00ECAB15 /* CalculateStoreDataTool.m in Sources */,
 				5E12C6E22148C18B00650C8A /* CalculateVCViewController.m in Sources */,
 				5E12C6B32148BC6300650C8A /* ViewController.m in Sources */,
 				5E12C6BE2148BC6600650C8A /* main.m in Sources */,
-				5E37FA32215B81A9004D95FE /* CalculateModel.m in Sources */,
 				5E12C6B02148BC6300650C8A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

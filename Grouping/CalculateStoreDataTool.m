@@ -7,6 +7,10 @@
 //
 
 #import "CalculateStoreDataTool.h"
+#import "CalculateModel.h"
+#import "MMGroupingModel.h"
+#import "MMGroupingDateModel.h"
+
 static NSString *const kUserInfo_File_Name = @"kCalculate_File_Name.data";
 static NSString *const kCalculateInfo_key = @"kCalculateInfo_key";
 
@@ -17,10 +21,45 @@ static NSString *const kCalculateInfo_key = @"kCalculateInfo_key";
 + (void)storeCalculateData:(NSArray *)calculateData{
 
     
-    NSMutableData *deviceData = [[NSMutableData alloc] init];
+    NSMutableArray *array = [NSMutableArray arrayWithArray:[CalculateStoreDataTool getStoredArray]];
+    if (array && array.count>0) {
+        for (NSInteger i = 0; i<array.count; i++) {
+            
+            MMGroupingModel *groupingModel = [array objectAtIndex:i];
+
+            NSString *storeTime = groupingModel.dateString;
+            
+            if ([storeTime isEqualToString:[CalculateStoreDataTool getCurretTime]]) {
+                NSMutableArray *currentDataArray = [groupingModel.dateGroupArray mutableCopy];
+                
+                MMGroupingDateModel *model = [[MMGroupingDateModel alloc]init];
+                model.currentDateArray = calculateData;
+                model.currentTitle = [CalculateStoreDataTool getCurrentDetailTime];
+                
+                [currentDataArray insertObject:calculateData atIndex:0];
+                groupingModel.dateGroupArray = currentDataArray;
+                break;
+            }
+            
+        }
+    }else{
+        MMGroupingModel *groupingModel = [[MMGroupingModel alloc] init];
+        groupingModel.dateString = [CalculateStoreDataTool getCurretTime];
+        
+        NSMutableArray *mutableArray = [NSMutableArray array];
+        MMGroupingDateModel *model = [[MMGroupingDateModel alloc]init];
+        model.currentDateArray = calculateData;
+        model.currentTitle = [CalculateStoreDataTool getCurrentDetailTime];
+        [mutableArray addObject:model];
+        
+        groupingModel.dateGroupArray = mutableArray;
+        
+        [array addObject:groupingModel];
+    }
     
+    NSMutableData *deviceData = [[NSMutableData alloc] init];
     NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:deviceData];
-    [archiver encodeObject:[CalculateStoreDataTool getDeviceDataPath] forKey:kCalculateInfo_key];
+    [archiver encodeObject:array forKey:kCalculateInfo_key];
     [archiver finishEncoding];
     [deviceData writeToFile:[CalculateStoreDataTool getDeviceDataPath] atomically:YES];
 }
@@ -41,13 +80,23 @@ static NSString *const kCalculateInfo_key = @"kCalculateInfo_key";
     return deviceDataPath;
 }
 
-- (void)getTimeStamp{
-    NSTimeInterval timeIn = [[NSDate alloc] timeIntervalSince1970];
++ (NSString *)getCurretTime{
     
     NSDateFormatter *dateformate = [[NSDateFormatter alloc]init];
-    dateformate.dateFormat = @"yy-mm-dd";
+    dateformate.dateStyle = NSDateFormatterMediumStyle;
+    dateformate.timeStyle = NSDateFormatterShortStyle;
+    dateformate.dateFormat = @"yyyy-MM-dd";
     NSString *currentTime = [dateformate stringFromDate:[NSDate date]];
-    
+    return currentTime;
+}
+
++ (NSString *)getCurrentDetailTime{
+    NSDateFormatter *dateformate = [[NSDateFormatter alloc]init];
+    dateformate.dateStyle = NSDateFormatterMediumStyle;
+    dateformate.timeStyle = NSDateFormatterShortStyle;
+    dateformate.dateFormat = @"HH:MM:ss";
+    NSString *currentTime = [dateformate stringFromDate:[NSDate date]];
+    return currentTime;
 }
 
 @end

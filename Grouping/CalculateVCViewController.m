@@ -8,7 +8,7 @@
 
 #import "CalculateVCViewController.h"
 #import "CalculateModel.h"
-
+#import "CalculateStoreDataTool.h"
 @interface CalculateVCViewController ()
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
@@ -92,11 +92,19 @@
                 }];
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((i*3 + j*0.5 + 1)* NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [timer invalidate];
-                    textField.text = [NSString stringWithFormat:@"%@",dividedArray[j]];
+                    CalculateModel *model = dividedArray[j];
+                    textField.text = model.name;
+                    
                 });
             }
     }
-    self.dataArray = dataArray;
+    [CalculateStoreDataTool storeCalculateData:dataArray];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSArray *array = [CalculateStoreDataTool getStoredArray];
+        
+        NSLog(@"%@",array);
+    });
     
 }
 
