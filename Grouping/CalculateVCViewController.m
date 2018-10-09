@@ -29,8 +29,17 @@
     self.title = @"分组";
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"开始分组" style:UIBarButtonItemStyleDone target:self action:@selector(groupClick:)];
-    self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc]initWithTitle:@"开始分组" style:UIBarButtonItemStyleDone target:self action:@selector(groupClick:)]];
+    
+    if (self.lastStoredArray && self.lastStoredArray.count >0) {
+        self.perTeamCount = self.lastStoredArray.count;
+        NSArray *teamArray = [self.lastStoredArray firstObject];
+        self.teamCount = teamArray.count;
+        self.navigationItem.rightBarButtonItem = nil;
+        self.title = @"历史分组";
+    }
+    
     self.dataArray = [NSMutableArray arrayWithCapacity:self.perTeamCount];
+    
 }
 
 - (void)createUI{
@@ -59,6 +68,12 @@
             textfiled.clipsToBounds = YES;
             [textfiled setValue:[UIColor lightGrayColor] forKeyPath:@"_placeholderLabel.textColor"];
 
+            if (self.lastStoredArray && self.lastStoredArray.count > 0) {
+                NSArray *array = [self.lastStoredArray objectAtIndex:i];
+                CalculateModel *model = [array objectAtIndex:j];
+                textfiled.text = model.name;
+            }
+            
             [self.view addSubview:textfiled];
             [array addObject:textfiled];
         }
@@ -135,6 +150,11 @@
         
     }
     return dividedArray;
+}
+
+#pragma mark - history in
+- (void)setCurrentStoreArray:(NSArray *)currentStoreArray{
+    
 }
 
 

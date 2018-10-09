@@ -11,7 +11,8 @@
 @interface CalculateVCViewController : UIViewController
 
 @property (nonatomic, assign) NSInteger teamCount;
-
 @property (nonatomic, assign) NSInteger perTeamCount;
+
+@property (nonatomic, strong) NSArray *lastStoredArray;
 
 @end

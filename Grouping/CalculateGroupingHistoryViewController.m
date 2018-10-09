@@ -7,10 +7,13 @@
 //
 
 #import "CalculateGroupingHistoryViewController.h"
+#import "CalculateVCViewController.h"
+
 #import "CalculateStoreDataTool.h"
 #import "MMGroupingModel.h"
 #import "MMGroupingDateModel.h"
 #import "CalculateModel.h"
+
 #import "ColorFile.h"
 @interface CalculateGroupingHistoryViewController ()
 
@@ -80,6 +83,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    MMGroupingModel *model = [self.dataSource objectAtIndex:indexPath.section];
+    MMGroupingDateModel *dateModel = [model.dateGroupArray objectAtIndex:indexPath.row];
+    
+    CalculateVCViewController *calculateVC = [[CalculateVCViewController alloc]init];
+    calculateVC.lastStoredArray = dateModel.currentDateArray;
+    [self.navigationController pushViewController:calculateVC animated:YES];
+    
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
