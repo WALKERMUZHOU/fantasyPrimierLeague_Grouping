@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kPp-5b-VL7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kPp-5b-VL7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="几队人啊？" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gps-TB-mc9">
-                                <rect key="frame" x="113" y="155" width="150" height="30"/>
+                                <rect key="frame" x="112.5" y="155" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Urh-eu-BwU"/>
                                 </constraints>
@@ -44,7 +44,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="每队几人？" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UA6-1M-tI5">
-                                <rect key="frame" x="113" y="205" width="150" height="30"/>
+                                <rect key="frame" x="112.5" y="205" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="lmj-zv-cc6"/>
                                 </constraints>
@@ -85,7 +85,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="快乐英超" id="6T8-Ac-vnI"/>
+                    <navigationItem key="navigationItem" title="快乐英超" id="6T8-Ac-vnI">
+                        <barButtonItem key="rightBarButtonItem" title="历史分组" id="blX-Kl-YmU">
+                            <connections>
+                                <action selector="historyClick:" destination="BYZ-38-t0r" id="Ivg-zX-sQJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="listCount" destination="UA6-1M-tI5" id="viG-yF-Bfl"/>
                         <outlet property="rowCount" destination="gps-TB-mc9" id="08v-mU-6t3"/>

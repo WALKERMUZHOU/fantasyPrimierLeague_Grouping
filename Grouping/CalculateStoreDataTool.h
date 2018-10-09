@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)storeCalculateData:(NSArray *)calculateData;
 + (NSArray *)getStoredArray;
 
++ (void)reStoreAllData:(NSArray *)allData;
+
 @end
 
 NS_ASSUME_NONNULL_END

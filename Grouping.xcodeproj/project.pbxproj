@@ -21,6 +21,17 @@
 		5EA07CBE216B427E0090E842 /* MMGroupingDateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CB9216B427E0090E842 /* MMGroupingDateModel.m */; };
 		5EA07CBF216B427E0090E842 /* MMGroupingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CBA216B427E0090E842 /* MMGroupingModel.m */; };
 		5EA07CC3216B434E0090E842 /* MMBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CC2216B434E0090E842 /* MMBaseModel.m */; };
+		5EA07CC6216C49010090E842 /* MMBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CC5216C49010090E842 /* MMBaseView.m */; };
+		5EA07CC9216C49170090E842 /* MMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CC8216C49170090E842 /* MMBaseViewController.m */; };
+		5EA07CCD216C59AC0090E842 /* MMFreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CCC216C59AC0090E842 /* MMFreshHeader.m */; };
+		5EA07CD0216C59C50090E842 /* MMRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CCF216C59C50090E842 /* MMRefreshFooter.m */; };
+		5EA07CD3216C816F0090E842 /* MMNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CD2216C816F0090E842 /* MMNavigationViewController.m */; };
+		5EA07CD7216C81F40090E842 /* MMBaseTalbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CD6216C81F40090E842 /* MMBaseTalbleView.m */; };
+		5EA07CDA216C8B6E0090E842 /* MMBaseCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CD9216C8B6E0090E842 /* MMBaseCollectionView.m */; };
+		5EA07CDD216C90880090E842 /* MMBaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CDC216C90880090E842 /* MMBaseListViewController.m */; };
+		5EA07CE0216C92850090E842 /* MMBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CDF216C92850090E842 /* MMBaseTableViewController.m */; };
+		5EA07CE3216C92930090E842 /* MMBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CE2216C92930090E842 /* MMBaseCollectionViewController.m */; };
+		5EA07CEB216C9B940090E842 /* CalculateGroupingHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CEA216C9B940090E842 /* CalculateGroupingHistoryViewController.m */; };
 		5EF5D03C215E193A00ECAB15 /* CalculateStoreDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5D03B215E193A00ECAB15 /* CalculateStoreDataTool.m */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +79,30 @@
 		5EA07CBC216B427E0090E842 /* CalculateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateModel.h; sourceTree = "<group>"; };
 		5EA07CC1216B434E0090E842 /* MMBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMBaseModel.h; sourceTree = "<group>"; };
 		5EA07CC2216B434E0090E842 /* MMBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMBaseModel.m; sourceTree = "<group>"; };
+		5EA07CC4216C49010090E842 /* MMBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMBaseView.h; sourceTree = "<group>"; };
+		5EA07CC5216C49010090E842 /* MMBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMBaseView.m; sourceTree = "<group>"; };
+		5EA07CC7216C49170090E842 /* MMBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMBaseViewController.h; sourceTree = "<group>"; };
+		5EA07CC8216C49170090E842 /* MMBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMBaseViewController.m; sourceTree = "<group>"; };
+		5EA07CCB216C59AC0090E842 /* MMFreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMFreshHeader.h; sourceTree = "<group>"; };
+		5EA07CCC216C59AC0090E842 /* MMFreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMFreshHeader.m; sourceTree = "<group>"; };
+		5EA07CCE216C59C50090E842 /* MMRefreshFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMRefreshFooter.h; sourceTree = "<group>"; };
+		5EA07CCF216C59C50090E842 /* MMRefreshFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMRefreshFooter.m; sourceTree = "<group>"; };
+		5EA07CD1216C816F0090E842 /* MMNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMNavigationViewController.h; sourceTree = "<group>"; };
+		5EA07CD2216C816F0090E842 /* MMNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMNavigationViewController.m; sourceTree = "<group>"; };
+		5EA07CD5216C81F40090E842 /* MMBaseTalbleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMBaseTalbleView.h; sourceTree = "<group>"; };
+		5EA07CD6216C81F40090E842 /* MMBaseTalbleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMBaseTalbleView.m; sourceTree = "<group>"; };
+		5EA07CD8216C8B6E0090E842 /* MMBaseCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMBaseCollectionView.h; sourceTree = "<group>"; };
+		5EA07CD9216C8B6E0090E842 /* MMBaseCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMBaseCollectionView.m; sourceTree = "<group>"; };
+		5EA07CDB216C90880090E842 /* MMBaseListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMBaseListViewController.h; sourceTree = "<group>"; };
+		5EA07CDC216C90880090E842 /* MMBaseListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMBaseListViewController.m; sourceTree = "<group>"; };
+		5EA07CDE216C92850090E842 /* MMBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMBaseTableViewController.h; sourceTree = "<group>"; };
+		5EA07CDF216C92850090E842 /* MMBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMBaseTableViewController.m; sourceTree = "<group>"; };
+		5EA07CE1216C92930090E842 /* MMBaseCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMBaseCollectionViewController.h; sourceTree = "<group>"; };
+		5EA07CE2216C92930090E842 /* MMBaseCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMBaseCollectionViewController.m; sourceTree = "<group>"; };
+		5EA07CE7216C93BB0090E842 /* ConstantFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstantFile.h; sourceTree = "<group>"; };
+		5EA07CE8216C93EC0090E842 /* ColorFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorFile.h; sourceTree = "<group>"; };
+		5EA07CE9216C9B940090E842 /* CalculateGroupingHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculateGroupingHistoryViewController.h; sourceTree = "<group>"; };
+		5EA07CEA216C9B940090E842 /* CalculateGroupingHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculateGroupingHistoryViewController.m; sourceTree = "<group>"; };
 		5EF5D03A215E193A00ECAB15 /* CalculateStoreDataTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculateStoreDataTool.h; sourceTree = "<group>"; };
 		5EF5D03B215E193A00ECAB15 /* CalculateStoreDataTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculateStoreDataTool.m; sourceTree = "<group>"; };
 		7D19B861A2E799780D384BBB /* Pods-Grouping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grouping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grouping/Pods-Grouping.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +171,8 @@
 				5E12C6E12148C18B00650C8A /* CalculateVCViewController.m */,
 				5EF5D03A215E193A00ECAB15 /* CalculateStoreDataTool.h */,
 				5EF5D03B215E193A00ECAB15 /* CalculateStoreDataTool.m */,
+				5EA07CE9216C9B940090E842 /* CalculateGroupingHistoryViewController.h */,
+				5EA07CEA216C9B940090E842 /* CalculateGroupingHistoryViewController.m */,
 				5E12C6B42148BC6300650C8A /* Main.storyboard */,
 				5E12C6B72148BC6600650C8A /* Assets.xcassets */,
 				5E12C6B92148BC6600650C8A /* LaunchScreen.storyboard */,
@@ -179,10 +216,56 @@
 		5EA07CC0216B43400090E842 /* BaseObject */ = {
 			isa = PBXGroup;
 			children = (
+				5EA07CE4216C92FF0090E842 /* ConfigFile */,
+				5EA07CD4216C81C50090E842 /* MMBaseListView */,
+				5EA07CCA216C4A070090E842 /* MJBaseObject */,
 				5EA07CC1216B434E0090E842 /* MMBaseModel.h */,
 				5EA07CC2216B434E0090E842 /* MMBaseModel.m */,
+				5EA07CC4216C49010090E842 /* MMBaseView.h */,
+				5EA07CC5216C49010090E842 /* MMBaseView.m */,
+				5EA07CC7216C49170090E842 /* MMBaseViewController.h */,
+				5EA07CC8216C49170090E842 /* MMBaseViewController.m */,
+				5EA07CD1216C816F0090E842 /* MMNavigationViewController.h */,
+				5EA07CD2216C816F0090E842 /* MMNavigationViewController.m */,
 			);
 			path = BaseObject;
+			sourceTree = "<group>";
+		};
+		5EA07CCA216C4A070090E842 /* MJBaseObject */ = {
+			isa = PBXGroup;
+			children = (
+				5EA07CCB216C59AC0090E842 /* MMFreshHeader.h */,
+				5EA07CCC216C59AC0090E842 /* MMFreshHeader.m */,
+				5EA07CCE216C59C50090E842 /* MMRefreshFooter.h */,
+				5EA07CCF216C59C50090E842 /* MMRefreshFooter.m */,
+			);
+			path = MJBaseObject;
+			sourceTree = "<group>";
+		};
+		5EA07CD4216C81C50090E842 /* MMBaseListView */ = {
+			isa = PBXGroup;
+			children = (
+				5EA07CD5216C81F40090E842 /* MMBaseTalbleView.h */,
+				5EA07CD6216C81F40090E842 /* MMBaseTalbleView.m */,
+				5EA07CD8216C8B6E0090E842 /* MMBaseCollectionView.h */,
+				5EA07CD9216C8B6E0090E842 /* MMBaseCollectionView.m */,
+				5EA07CDB216C90880090E842 /* MMBaseListViewController.h */,
+				5EA07CDC216C90880090E842 /* MMBaseListViewController.m */,
+				5EA07CDE216C92850090E842 /* MMBaseTableViewController.h */,
+				5EA07CDF216C92850090E842 /* MMBaseTableViewController.m */,
+				5EA07CE1216C92930090E842 /* MMBaseCollectionViewController.h */,
+				5EA07CE2216C92930090E842 /* MMBaseCollectionViewController.m */,
+			);
+			path = MMBaseListView;
+			sourceTree = "<group>";
+		};
+		5EA07CE4216C92FF0090E842 /* ConfigFile */ = {
+			isa = PBXGroup;
+			children = (
+				5EA07CE7216C93BB0090E842 /* ConstantFile.h */,
+				5EA07CE8216C93EC0090E842 /* ColorFile.h */,
+			);
+			path = ConfigFile;
 			sourceTree = "<group>";
 		};
 		AE3F3B1E93734FFD5098B524 /* Pods */ = {
@@ -391,15 +474,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA07CE3216C92930090E842 /* MMBaseCollectionViewController.m in Sources */,
 				5EA07CBE216B427E0090E842 /* MMGroupingDateModel.m in Sources */,
 				5EA07CC3216B434E0090E842 /* MMBaseModel.m in Sources */,
+				5EA07CD0216C59C50090E842 /* MMRefreshFooter.m in Sources */,
 				5EA07CBD216B427E0090E842 /* CalculateModel.m in Sources */,
 				5EA07CBF216B427E0090E842 /* MMGroupingModel.m in Sources */,
 				5EF5D03C215E193A00ECAB15 /* CalculateStoreDataTool.m in Sources */,
+				5EA07CD3216C816F0090E842 /* MMNavigationViewController.m in Sources */,
 				5E12C6E22148C18B00650C8A /* CalculateVCViewController.m in Sources */,
+				5EA07CC9216C49170090E842 /* MMBaseViewController.m in Sources */,
 				5E12C6B32148BC6300650C8A /* ViewController.m in Sources */,
+				5EA07CDD216C90880090E842 /* MMBaseListViewController.m in Sources */,
 				5E12C6BE2148BC6600650C8A /* main.m in Sources */,
+				5EA07CEB216C9B940090E842 /* CalculateGroupingHistoryViewController.m in Sources */,
+				5EA07CD7216C81F40090E842 /* MMBaseTalbleView.m in Sources */,
+				5EA07CCD216C59AC0090E842 /* MMFreshHeader.m in Sources */,
+				5EA07CDA216C8B6E0090E842 /* MMBaseCollectionView.m in Sources */,
 				5E12C6B02148BC6300650C8A /* AppDelegate.m in Sources */,
+				5EA07CE0216C92850090E842 /* MMBaseTableViewController.m in Sources */,
+				5EA07CC6216C49010090E842 /* MMBaseView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

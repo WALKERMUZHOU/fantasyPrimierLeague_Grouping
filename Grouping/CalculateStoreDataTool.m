@@ -36,7 +36,7 @@ static NSString *const kCalculateInfo_key = @"kCalculateInfo_key";
                 model.currentDateArray = calculateData;
                 model.currentTitle = [CalculateStoreDataTool getCurrentDetailTime];
                 
-                [currentDataArray insertObject:calculateData atIndex:0];
+                [currentDataArray insertObject:model atIndex:0];
                 groupingModel.dateGroupArray = currentDataArray;
                 break;
             }
@@ -60,6 +60,14 @@ static NSString *const kCalculateInfo_key = @"kCalculateInfo_key";
     NSMutableData *deviceData = [[NSMutableData alloc] init];
     NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:deviceData];
     [archiver encodeObject:array forKey:kCalculateInfo_key];
+    [archiver finishEncoding];
+    [deviceData writeToFile:[CalculateStoreDataTool getDeviceDataPath] atomically:YES];
+}
+
++ (void)reStoreAllData:(NSArray *)allData{
+    NSMutableData *deviceData = [[NSMutableData alloc] init];
+    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:deviceData];
+    [archiver encodeObject:allData forKey:kCalculateInfo_key];
     [archiver finishEncoding];
     [deviceData writeToFile:[CalculateStoreDataTool getDeviceDataPath] atomically:YES];
 }

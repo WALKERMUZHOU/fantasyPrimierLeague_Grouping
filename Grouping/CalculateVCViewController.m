@@ -87,7 +87,7 @@
                 
                 UITextField *textField = [array objectAtIndex:j];
                 NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
-                    NSInteger random = arc4random()%self.dataArray.count;
+                    NSInteger random = arc4random()%array.count;
                     textField.text = [NSString stringWithFormat:@"%@",titleArray[random]];
                 }];
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((i*3 + j*0.5 + 1)* NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

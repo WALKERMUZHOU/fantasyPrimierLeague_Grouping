@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CalculateVCViewController.h"
+#import "CalculateGroupingHistoryViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *rowCount;
@@ -23,6 +24,7 @@
     UITapGestureRecognizer *myTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
     [self.view addGestureRecognizer:myTap];
 }
+
 
 - (void)tap{
     [self.view endEditing:YES];
@@ -61,6 +63,13 @@
     calcuVC.perTeamCount = self.listCount.text.integerValue;
     [self.navigationController pushViewController:calcuVC animated:YES];
     
+}
+
+- (IBAction)historyClick:(UIBarButtonItem *)sender {
+
+    CalculateGroupingHistoryViewController *historyVC = [[CalculateGroupingHistoryViewController alloc]init];
+    [self.navigationController pushViewController:historyVC animated:YES];
+
 }
 
 - (void)didReceiveMemoryWarning {
