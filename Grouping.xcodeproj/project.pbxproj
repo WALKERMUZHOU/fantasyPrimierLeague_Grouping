@@ -32,6 +32,15 @@
 		5EA07CE0216C92850090E842 /* MMBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CDF216C92850090E842 /* MMBaseTableViewController.m */; };
 		5EA07CE3216C92930090E842 /* MMBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CE2216C92930090E842 /* MMBaseCollectionViewController.m */; };
 		5EA07CEB216C9B940090E842 /* CalculateGroupingHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CEA216C9B940090E842 /* CalculateGroupingHistoryViewController.m */; };
+		5EA07CF3216DA5750090E842 /* WMHUDUntil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CF1216DA5750090E842 /* WMHUDUntil.m */; };
+		5EA07CF4216DA5750090E842 /* WMHUDUntil.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5EA07CF2216DA5750090E842 /* WMHUDUntil.bundle */; };
+		5EA07CFE216DA78D0090E842 /* PanGestureScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CF9216DA78C0090E842 /* PanGestureScrollView.m */; };
+		5EA07CFF216DA78D0090E842 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CFA216DA78C0090E842 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		5EA07D00216DA78D0090E842 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CFC216DA78D0090E842 /* UIViewController+BackButtonHandler.m */; };
+		5EA07D01216DA78D0090E842 /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07CFD216DA78D0090E842 /* UIViewController+DismissKeyboard.m */; };
+		5EA07D17216DA90E0090E842 /* HWWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07D10216DA90E0090E842 /* HWWeakTimer.m */; };
+		5EA07D18216DA90E0090E842 /* StyledPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07D14216DA90E0090E842 /* StyledPageControl.m */; };
+		5EA07D19216DA90E0090E842 /* MMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA07D16216DA90E0090E842 /* MMScrollView.m */; };
 		5EF5D03C215E193A00ECAB15 /* CalculateStoreDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5D03B215E193A00ECAB15 /* CalculateStoreDataTool.m */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +112,23 @@
 		5EA07CE8216C93EC0090E842 /* ColorFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorFile.h; sourceTree = "<group>"; };
 		5EA07CE9216C9B940090E842 /* CalculateGroupingHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculateGroupingHistoryViewController.h; sourceTree = "<group>"; };
 		5EA07CEA216C9B940090E842 /* CalculateGroupingHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculateGroupingHistoryViewController.m; sourceTree = "<group>"; };
+		5EA07CF0216DA5750090E842 /* WMHUDUntil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMHUDUntil.h; sourceTree = "<group>"; };
+		5EA07CF1216DA5750090E842 /* WMHUDUntil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMHUDUntil.m; sourceTree = "<group>"; };
+		5EA07CF2216DA5750090E842 /* WMHUDUntil.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WMHUDUntil.bundle; sourceTree = "<group>"; };
+		5EA07CF5216DA78C0090E842 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		5EA07CF7216DA78C0090E842 /* PanGestureScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanGestureScrollView.h; sourceTree = "<group>"; };
+		5EA07CF8216DA78C0090E842 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		5EA07CF9216DA78C0090E842 /* PanGestureScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanGestureScrollView.m; sourceTree = "<group>"; };
+		5EA07CFA216DA78C0090E842 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		5EA07CFB216DA78D0090E842 /* UIViewController+DismissKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DismissKeyboard.h"; sourceTree = "<group>"; };
+		5EA07CFC216DA78D0090E842 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		5EA07CFD216DA78D0090E842 /* UIViewController+DismissKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DismissKeyboard.m"; sourceTree = "<group>"; };
+		5EA07D10216DA90E0090E842 /* HWWeakTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWeakTimer.m; sourceTree = "<group>"; };
+		5EA07D11216DA90E0090E842 /* HWWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWeakTimer.h; sourceTree = "<group>"; };
+		5EA07D13216DA90E0090E842 /* StyledPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyledPageControl.h; sourceTree = "<group>"; };
+		5EA07D14216DA90E0090E842 /* StyledPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyledPageControl.m; sourceTree = "<group>"; };
+		5EA07D15216DA90E0090E842 /* MMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMScrollView.h; sourceTree = "<group>"; };
+		5EA07D16216DA90E0090E842 /* MMScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMScrollView.m; sourceTree = "<group>"; };
 		5EF5D03A215E193A00ECAB15 /* CalculateStoreDataTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculateStoreDataTool.h; sourceTree = "<group>"; };
 		5EF5D03B215E193A00ECAB15 /* CalculateStoreDataTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculateStoreDataTool.m; sourceTree = "<group>"; };
 		7D19B861A2E799780D384BBB /* Pods-Grouping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grouping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grouping/Pods-Grouping.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +187,7 @@
 		5E12C6AD2148BC6300650C8A /* Grouping */ = {
 			isa = PBXGroup;
 			children = (
+				5EA07CEC216DA5750090E842 /* MMAdapt */,
 				5EA07CC0216B43400090E842 /* BaseObject */,
 				5EA07CB6216B427E0090E842 /* GroupModel */,
 				5E12C6AE2148BC6300650C8A /* AppDelegate.h */,
@@ -266,6 +293,86 @@
 				5EA07CE8216C93EC0090E842 /* ColorFile.h */,
 			);
 			path = ConfigFile;
+			sourceTree = "<group>";
+		};
+		5EA07CEC216DA5750090E842 /* MMAdapt */ = {
+			isa = PBXGroup;
+			children = (
+				5EA07D0E216DA90E0090E842 /* MMScrollView */,
+				5EA07CED216DA5750090E842 /* UIViewControllerExtension */,
+				5EA07CEE216DA5750090E842 /* WMHUDUntil */,
+			);
+			path = MMAdapt;
+			sourceTree = "<group>";
+		};
+		5EA07CED216DA5750090E842 /* UIViewControllerExtension */ = {
+			isa = PBXGroup;
+			children = (
+				5EA07CF6216DA78C0090E842 /* FDFullscreenPopGesture */,
+				5EA07CF5216DA78C0090E842 /* UIViewController+BackButtonHandler.h */,
+				5EA07CFC216DA78D0090E842 /* UIViewController+BackButtonHandler.m */,
+				5EA07CFB216DA78D0090E842 /* UIViewController+DismissKeyboard.h */,
+				5EA07CFD216DA78D0090E842 /* UIViewController+DismissKeyboard.m */,
+			);
+			path = UIViewControllerExtension;
+			sourceTree = "<group>";
+		};
+		5EA07CEE216DA5750090E842 /* WMHUDUntil */ = {
+			isa = PBXGroup;
+			children = (
+				5EA07CEF216DA5750090E842 /* WMHUDUntil */,
+				5EA07CF2216DA5750090E842 /* WMHUDUntil.bundle */,
+			);
+			path = WMHUDUntil;
+			sourceTree = "<group>";
+		};
+		5EA07CEF216DA5750090E842 /* WMHUDUntil */ = {
+			isa = PBXGroup;
+			children = (
+				5EA07CF0216DA5750090E842 /* WMHUDUntil.h */,
+				5EA07CF1216DA5750090E842 /* WMHUDUntil.m */,
+			);
+			path = WMHUDUntil;
+			sourceTree = "<group>";
+		};
+		5EA07CF6216DA78C0090E842 /* FDFullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				5EA07CF7216DA78C0090E842 /* PanGestureScrollView.h */,
+				5EA07CF9216DA78C0090E842 /* PanGestureScrollView.m */,
+				5EA07CF8216DA78C0090E842 /* UINavigationController+FDFullscreenPopGesture.h */,
+				5EA07CFA216DA78C0090E842 /* UINavigationController+FDFullscreenPopGesture.m */,
+			);
+			path = FDFullscreenPopGesture;
+			sourceTree = "<group>";
+		};
+		5EA07D0E216DA90E0090E842 /* MMScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				5EA07D0F216DA90E0090E842 /* WeakTimer */,
+				5EA07D12216DA90E0090E842 /* StyledPageControl */,
+				5EA07D15216DA90E0090E842 /* MMScrollView.h */,
+				5EA07D16216DA90E0090E842 /* MMScrollView.m */,
+			);
+			path = MMScrollView;
+			sourceTree = "<group>";
+		};
+		5EA07D0F216DA90E0090E842 /* WeakTimer */ = {
+			isa = PBXGroup;
+			children = (
+				5EA07D10216DA90E0090E842 /* HWWeakTimer.m */,
+				5EA07D11216DA90E0090E842 /* HWWeakTimer.h */,
+			);
+			path = WeakTimer;
+			sourceTree = "<group>";
+		};
+		5EA07D12216DA90E0090E842 /* StyledPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				5EA07D13216DA90E0090E842 /* StyledPageControl.h */,
+				5EA07D14216DA90E0090E842 /* StyledPageControl.m */,
+			);
+			path = StyledPageControl;
 			sourceTree = "<group>";
 		};
 		AE3F3B1E93734FFD5098B524 /* Pods */ = {
@@ -392,6 +499,7 @@
 			files = (
 				5E12C6BB2148BC6600650C8A /* LaunchScreen.storyboard in Resources */,
 				5E12C6B82148BC6600650C8A /* Assets.xcassets in Resources */,
+				5EA07CF4216DA5750090E842 /* WMHUDUntil.bundle in Resources */,
 				5E12C6B62148BC6300650C8A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,19 +587,27 @@
 				5EA07CC3216B434E0090E842 /* MMBaseModel.m in Sources */,
 				5EA07CD0216C59C50090E842 /* MMRefreshFooter.m in Sources */,
 				5EA07CBD216B427E0090E842 /* CalculateModel.m in Sources */,
+				5EA07D01216DA78D0090E842 /* UIViewController+DismissKeyboard.m in Sources */,
 				5EA07CBF216B427E0090E842 /* MMGroupingModel.m in Sources */,
 				5EF5D03C215E193A00ECAB15 /* CalculateStoreDataTool.m in Sources */,
+				5EA07CFE216DA78D0090E842 /* PanGestureScrollView.m in Sources */,
 				5EA07CD3216C816F0090E842 /* MMNavigationViewController.m in Sources */,
+				5EA07D17216DA90E0090E842 /* HWWeakTimer.m in Sources */,
 				5E12C6E22148C18B00650C8A /* CalculateVCViewController.m in Sources */,
+				5EA07D00216DA78D0090E842 /* UIViewController+BackButtonHandler.m in Sources */,
 				5EA07CC9216C49170090E842 /* MMBaseViewController.m in Sources */,
 				5E12C6B32148BC6300650C8A /* ViewController.m in Sources */,
 				5EA07CDD216C90880090E842 /* MMBaseListViewController.m in Sources */,
+				5EA07CF3216DA5750090E842 /* WMHUDUntil.m in Sources */,
 				5E12C6BE2148BC6600650C8A /* main.m in Sources */,
+				5EA07D18216DA90E0090E842 /* StyledPageControl.m in Sources */,
+				5EA07CFF216DA78D0090E842 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				5EA07CEB216C9B940090E842 /* CalculateGroupingHistoryViewController.m in Sources */,
 				5EA07CD7216C81F40090E842 /* MMBaseTalbleView.m in Sources */,
 				5EA07CCD216C59AC0090E842 /* MMFreshHeader.m in Sources */,
 				5EA07CDA216C8B6E0090E842 /* MMBaseCollectionView.m in Sources */,
 				5E12C6B02148BC6300650C8A /* AppDelegate.m in Sources */,
+				5EA07D19216DA90E0090E842 /* MMScrollView.m in Sources */,
 				5EA07CE0216C92850090E842 /* MMBaseTableViewController.m in Sources */,
 				5EA07CC6216C49010090E842 /* MMBaseView.m in Sources */,
 			);
@@ -603,6 +719,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
@@ -654,6 +771,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
