@@ -3,8 +3,8 @@
 //  MMScrollView.h
 //  CircleScrollView
 //
-//  Created by 橙子 on 15/8/20.
-//  Copyright (c) 2015年 橙子. All rights reserved.
+//  Created by zmm on 15/8/20.
+//  Copyright (c) 2015年 zmm. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

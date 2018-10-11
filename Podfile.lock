@@ -1,61 +1,123 @@
 PODS:
-  - DSCategories (0.1.4):
-    - DSCategories/NSArray (= 0.1.4)
-    - DSCategories/NSData (= 0.1.4)
-    - DSCategories/NSDictionary (= 0.1.4)
-    - DSCategories/NSString (= 0.1.4)
-    - DSCategories/NSUserDefaults (= 0.1.4)
-    - DSCategories/UIButton (= 0.1.4)
-    - DSCategories/UIColor (= 0.1.4)
-    - DSCategories/UIImage (= 0.1.4)
-    - DSCategories/UITextView (= 0.1.4)
-    - DSCategories/UIView (= 0.1.4)
-    - DSCategories/UIViewController (= 0.1.4)
-  - DSCategories/NSArray (0.1.4)
-  - DSCategories/NSData (0.1.4)
-  - DSCategories/NSDictionary (0.1.4)
-  - DSCategories/NSString (0.1.4)
-  - DSCategories/NSUserDefaults (0.1.4)
-  - DSCategories/UIButton (0.1.4)
-  - DSCategories/UIColor (0.1.4)
-  - DSCategories/UIImage (0.1.4)
-  - DSCategories/UITextView (0.1.4)
-  - DSCategories/UIView (0.1.4)
-  - DSCategories/UIViewController (0.1.4)
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - Aspects (1.4.1)
+  - AXIndicatorView (0.1.1)
+  - AXNavigationBackItemInjection (0.0.2)
+  - AXPracticalHUD (2.1.4):
+    - AXIndicatorView
+  - AXWebViewController (0.7.2):
+    - Aspects
+    - AXNavigationBackItemInjection
+    - AXPracticalHUD
+    - NJKWebViewProgress
+  - BFKit (1.11.0)
+  - FLAnimatedImage (1.0.12)
+  - GPUImage (0.1.7)
+  - IQKeyboardManager (6.1.1)
+  - KSPhotoBrowser (0.2.3):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage (~> 4.0)
+    - SDWebImage/GIF
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.15.7)
+  - NJKWebViewProgress (0.2.3):
+    - NJKWebViewProgress/Core (= 0.2.3)
+    - NJKWebViewProgress/ProgressView (= 0.2.3)
+  - NJKWebViewProgress/Core (0.2.3)
+  - NJKWebViewProgress/ProgressView (0.2.3)
+  - PPBadgeView (2.1.0)
+  - PPGetAddressBook (0.2.8)
+  - SDCycleScrollView (1.75):
+    - SDWebImage (>= 4.0.0)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
+  - SDWebImage/GIF (4.4.2):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage/Core
   - YYModel (1.0.4)
+  - ZLPhotoBrowser (2.7.4):
+    - GPUImage
+    - SDWebImage
 
 DEPENDENCIES:
-  - DSCategories (= 0.1.4)
+  - AFNetworking
+  - AXWebViewController
+  - BFKit
+  - IQKeyboardManager
+  - KSPhotoBrowser
   - Masonry (~> 1.1.0)
   - MBProgressHUD (~> 1.0.0)
   - MJRefresh (~> 3.1.15)
+  - PPBadgeView
+  - PPGetAddressBook
+  - SDCycleScrollView
   - SDWebImage (= 4.4.2)
   - YYModel (= 1.0.4)
+  - ZLPhotoBrowser
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - Aspects
+    - AXIndicatorView
+    - AXNavigationBackItemInjection
+    - AXPracticalHUD
+    - AXWebViewController
+    - BFKit
+    - FLAnimatedImage
+    - GPUImage
+    - IQKeyboardManager
+    - KSPhotoBrowser
     - Masonry
     - MBProgressHUD
     - MJRefresh
+    - NJKWebViewProgress
+    - PPBadgeView
+    - PPGetAddressBook
+    - SDCycleScrollView
     - SDWebImage
     - YYModel
-  https://github.com/walkdianzi/DSSpecs.git:
-    - DSCategories
+    - ZLPhotoBrowser
 
 SPEC CHECKSUMS:
-  DSCategories: d418e9c817b6aa075cfac4aad54f3ab24bb5fb5e
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  AXIndicatorView: 566b490a2dd9781d4ffbcc9752be9b9cdc6e728e
+  AXNavigationBackItemInjection: efe0446967f3cbcc85a9118decd1e145138912dd
+  AXPracticalHUD: 821d170b31e050c426ef8754b07b4264a8b1d861
+  AXWebViewController: 96566c473fce2806f4da696132b31777f5404c9f
+  BFKit: 9a72dcd121a768ae603084f2eb0a191e4916499a
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  IQKeyboardManager: 79c57795f5c2408d259d37b9da2ed07efcbb5225
+  KSPhotoBrowser: 222459c4158399d14b2a2e6538c4bc18ed901ba1
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
+  PPBadgeView: 167006b3497ebb6222942313a6b827e79791aae6
+  PPGetAddressBook: e4b6b0a87e852df5d5b90c44ecd9ded7f6f1ccf6
+  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  ZLPhotoBrowser: b666fe8f68edc63dc5c4edccca071885b87553f5
 
-PODFILE CHECKSUM: 81ca19a58c9470577c2826ae83fc57180e3e91bb
+PODFILE CHECKSUM: 59743eb92c432743725cb309b17a38dffb22b6db
 
 COCOAPODS: 1.5.3
