@@ -6,7 +6,7 @@
 //  Copyright © 2018 zmm. All rights reserved.
 //
 
-#import <MJRefresh/MJRefresh.h>
+#import "MJRefresh.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

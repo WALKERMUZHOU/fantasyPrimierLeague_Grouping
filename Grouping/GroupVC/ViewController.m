@@ -10,6 +10,7 @@
 #import "CalculateVCViewController.h"
 #import "CalculateGroupingHistoryViewController.h"
 #import "MMTBProgressViewController.h"
+#import "MMKeyboardSlideViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *rowCount;
@@ -24,6 +25,9 @@
     // Do any additional setup after loading the view, typically from a nib.
     UITapGestureRecognizer *myTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
     [self.view addGestureRecognizer:myTap];
+    
+    MMKeyboardSlideViewController *vc = [[MMKeyboardSlideViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:NO];
     
 }
 
