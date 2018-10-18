@@ -142,12 +142,19 @@
     NSMutableArray *dividedArray = [NSMutableArray arrayWithCapacity:array.count];
     for (NSInteger i = 0; i< array.count; i++) {
         NSInteger index = arc4random()%(array.count - i);
-        CalculateModel *model = [[CalculateModel alloc]init];
-        model.groupId = index;
-        model.name = tempArray[index];
-        [dividedArray addObject:model];
-        [tempArray removeObjectAtIndex:index];
-        
+        if(groupIndex == 0){
+            index = i;
+            CalculateModel *model = [[CalculateModel alloc]init];
+            model.groupId = index;
+            model.name = tempArray[index];
+            [dividedArray addObject:model];
+        }else{
+            CalculateModel *model = [[CalculateModel alloc]init];
+            model.groupId = index;
+            model.name = tempArray[index];
+            [dividedArray addObject:model];
+            [tempArray removeObjectAtIndex:index];
+        }
     }
     return dividedArray;
 }

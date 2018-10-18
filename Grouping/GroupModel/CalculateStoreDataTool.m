@@ -64,6 +64,29 @@ static NSString *const kCalculateInfo_key = @"kCalculateInfo_key";
     [deviceData writeToFile:[CalculateStoreDataTool getDeviceDataPath] atomically:YES];
 }
 
++ (void)reStoreOneDateDate:(MMGroupingDateModel *)model{
+    NSMutableArray *array = [NSMutableArray arrayWithArray:[CalculateStoreDataTool getStoredArray]];
+    for (NSInteger i = 0; i<array.count; i++) {
+        
+        MMGroupingModel *groupingModel = [array objectAtIndex:i];
+        
+        NSMutableArray *currentDataArray = [groupingModel.dateGroupArray mutableCopy];
+        for (NSInteger j = 0; j < currentDataArray.count; j++) {
+            MMGroupingDateModel *dateModel = [currentDataArray objectAtIndex:j];
+            if ([dateModel.currentTitle isEqualToString:model.currentTitle]) {
+                
+                [currentDataArray replaceObjectAtIndex:j withObject:model];
+                
+                groupingModel.dateGroupArray = currentDataArray;
+                [CalculateStoreDataTool reStoreAllData:array];
+                
+                return;
+            }
+
+        }
+    }
+}
+
 + (void)reStoreAllData:(NSArray *)allData{
     NSMutableData *deviceData = [[NSMutableData alloc] init];
     NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:deviceData];

@@ -8,6 +8,7 @@
 
 #import "CalculateGroupingHistoryViewController.h"
 #import "CalculateVCViewController.h"
+#import "CGHistoryDetailViewController.h"
 
 #import "CalculateStoreDataTool.h"
 #import "MMGroupingModel.h"
@@ -15,6 +16,7 @@
 #import "CalculateModel.h"
 
 #import "ColorFile.h"
+
 @interface CalculateGroupingHistoryViewController ()
 
 @end
@@ -87,8 +89,8 @@
     MMGroupingModel *model = [self.dataSource objectAtIndex:indexPath.section];
     MMGroupingDateModel *dateModel = [model.dateGroupArray objectAtIndex:indexPath.row];
     
-    CalculateVCViewController *calculateVC = [[CalculateVCViewController alloc]init];
-    calculateVC.lastStoredArray = dateModel.currentDateArray;
+    CGHistoryDetailViewController *calculateVC = [[CGHistoryDetailViewController alloc]init];
+    calculateVC.dateModel = dateModel;
     [self.navigationController pushViewController:calculateVC animated:YES];
     
 }

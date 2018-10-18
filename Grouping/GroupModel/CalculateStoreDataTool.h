@@ -7,16 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MMGroupingDateModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CalculateStoreDataTool : NSObject
 
-
+//存储当前排序结果
 + (void)storeCalculateData:(NSArray *)calculateData;
+
+//重新存储某一条数据
++ (void)reStoreOneDateDate:(MMGroupingDateModel *)model;
+
 + (NSArray *)getStoredArray;
 
+//重新存储全部结果
 + (void)reStoreAllData:(NSArray *)allData;
+
+
 
 @end
 
