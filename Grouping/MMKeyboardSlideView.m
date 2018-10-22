@@ -8,7 +8,9 @@
 
 #import "MMKeyboardSlideView.h"
 
-@interface MMKeyboardSlideView ()<UITextFieldDelegate>
+@interface MMKeyboardSlideView ()<UITextFieldDelegate>{
+    CGFloat _position;
+}
 
 @end
 
@@ -21,7 +23,8 @@
     if (self) {
         
         [self createUI];
-        
+        //初始化时,slider在中间
+        _position = 0.5f;
     }
     return self;
 }
@@ -39,11 +42,19 @@
     _slider.minimumTrackTintColor = UIColorFromRGB(0xe5e6e7);
     _slider.maximumTrackTintColor = UIColorFromRGB(0xe5e6e7);
     [_slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+    [_slider addTarget:self action:@selector(sliderValueEnded:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_slider];
+    
 }
 
 - (void)sliderValueChanged:(UISlider *)slider{
     CGFloat sliderValue = slider.value;
+    NSLog(@"%lf",sliderValue);
+}
+
+- (void)sliderValueEnded:(UISlider *)slider{
+    CGFloat sliderValue = slider.value;
+    NSLog(@"ended%lf",sliderValue);
 }
 
 - (void)setTextField:(UITextField *)textField{
