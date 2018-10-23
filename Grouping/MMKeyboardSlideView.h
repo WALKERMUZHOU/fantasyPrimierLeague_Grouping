@@ -9,6 +9,8 @@
 #import "MMBaseView.h"
 
 NS_ASSUME_NONNULL_BEGIN
+typedef void(^SliderBeginBlock)(void);
+typedef void(^SliderEndBlock)(void);
 
 @protocol MMKeyboardSlideViewDelegate <NSObject>
 
@@ -19,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MMKeyboardSlideView : MMBaseView
 
 @property (nonatomic, strong) UITextField *textField;
+@property (nonatomic, copy) SliderBeginBlock  beginBlock;
+@property (nonatomic, copy) SliderEndBlock    endBlock;
 
 @end
 

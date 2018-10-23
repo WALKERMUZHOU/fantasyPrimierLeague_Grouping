@@ -33,6 +33,8 @@
     textfield.backgroundColor = [UIColor blueColor];
     textfield.delegate = self;
     [self.view addSubview:textfield];
+    
+    _slideView.textField = textfield;
 }
 #pragma mark--添加通知---
 -(void)addNotification{

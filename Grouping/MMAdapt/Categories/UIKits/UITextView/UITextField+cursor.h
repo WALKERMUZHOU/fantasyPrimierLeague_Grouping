@@ -14,6 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSInteger)curOffset;
 
+
+/**
+ 以当前光标位置为起始位置
+ offset<0 往左移动
+ offset>0 往右移动
+ @param offset 偏移的量
+ */
 - (void)makeOffset:(NSInteger)offset;
 
 - (void)makeOffsetFromBeginning:(NSInteger)offset;
