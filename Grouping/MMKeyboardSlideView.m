@@ -10,15 +10,15 @@
 #import "MMAdapt/Categories/UIKits/UITextView/UITextField+cursor.h"
 @interface MMKeyboardSlideView ()<UITextFieldDelegate>{
     CGFloat _position;
-}
-
-@end
-
-static NSInteger sliderWidth = 200;
-
-@implementation MMKeyboardSlideView{
     UISlider *_slider;
 }
+@property (nonatomic, strong) NSArray *startEditArray;
+@property (nonatomic, strong) NSArray *endEditArray;
+@end
+
+static NSInteger sliderWidth = 150;
+
+@implementation MMKeyboardSlideView
 
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -27,6 +27,7 @@ static NSInteger sliderWidth = 200;
         [self createUI];
         //初始化时,slider在中间
         _position = 0.5f;
+        
     }
     return self;
 }
@@ -48,6 +49,25 @@ static NSInteger sliderWidth = 200;
     [_slider addTarget:self action:@selector(sliderValueEnded:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_slider];
     
+    CGFloat buttonWidth = (self.frame.size.width - sliderWidth)/self.startEditArray.count;
+    for (NSInteger i = 0; i<self.startEditArray.count; i++) {
+        NSInteger index = i;
+        UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(index * buttonWidth, 0, buttonWidth, self.frame.size.height)];
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [button.titleLabel setFont:kFont(13)];
+        if (i>1) {
+            button.frame = CGRectMake(index*buttonWidth + sliderWidth, 0, buttonWidth, self.frame.size.height);
+        }
+        [button setTitle:self.startEditArray[i] forState:UIControlStateNormal];
+        button.tag = 1000+i;
+        [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:button];
+    }
+    
+}
+
+- (void)buttonClick:(UIButton *)sender{
+    [self.textField insertText:sender.titleLabel.text];
 }
 
 - (void)sliderTouched{
@@ -57,7 +77,14 @@ static NSInteger sliderWidth = 200;
     CGFloat sliderEndWidth = kScreenWidth - 20;
     [UIView animateWithDuration:0.2 animations:^{
         self->_slider.frame = CGRectMake(10, (self.frame.size.height - 10)/2, sliderEndWidth, 10);
+        for (UIView *view in self.subviews) {
+            if ([view isKindOfClass:[UIButton class]]) {
+                view.hidden = YES;
+            }
+        }
     }];
+    
+    
 }
 
 - (void)sliderValueChanged:(UISlider *)slider{
@@ -76,14 +103,48 @@ static NSInteger sliderWidth = 200;
     }
     [UIView animateWithDuration:0.2 animations:^{
         self->_slider.frame = CGRectMake((self.frame.size.width - sliderWidth)/2, (self.frame.size.height - 10)/2, sliderWidth, 10);
+        for (UIView *view in self.subviews) {
+            if ([view isKindOfClass:[UIButton class]]) {
+                view.hidden = NO;
+            }
+        }
     }];
 }
 
 - (void)setTextField:(UITextField *)textField{
     _textField = textField;
+    [_textField addTarget:self action:@selector(textFieldValueChanged:) forControlEvents:UIControlEventEditingChanged];
     _textField.delegate = self;
 }
 
+- (void)textFieldValueChanged:(UITextField *)textField{
+    if (textField.text.length > 0) {
+        for (NSInteger i = 0; i<self.startEditArray.count; i++) {
+            UIButton *button = [self viewWithTag:1000 + i];
+            if ([button.titleLabel.text isEqualToString:self.endEditArray[i]]) {
+                return;
+            }else{
+                [button setTitle:self.endEditArray[i] forState:UIControlStateNormal];
+            }
+        }
+    }else{
+        for (NSInteger i = 0; i<self.startEditArray.count; i++) {
+            UIButton *button = [self viewWithTag:1000 + i];
+            [button setTitle:self.startEditArray[i] forState:UIControlStateNormal];
+        }
+    }
+}
+
+//- (void)textFieldDidBeginEditing:(UITextField *)textField{
+//    if (textField.text.length > 0) {
+//        for (NSInteger i = 0; i<self.startEditArray.count; i++) {
+//            UIButton *button = [self viewWithTag:1000 + i];
+//            if ([button.titleLabel.text isEqualToString:self.startEditArray[i]]) {
+//                return;
+//            }
+//        }
+//    }
+//}
 - (void)calculatePostionChanged:(CGFloat)currentSliderValue{
     NSInteger textFiledLength = _textField.text.length;
     NSInteger cursorPoint = _textField.curOffset;
@@ -115,19 +176,20 @@ static NSInteger sliderWidth = 200;
             }
         }
     }
-    
-    
-    
-    
 }
 
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (NSArray *)startEditArray{
+    if (!_startEditArray) {
+        _startEditArray = @[@"www.",@"m.",@"http://",@"https://"];
+    }
+    return _startEditArray;
 }
-*/
+
+- (NSArray *)endEditArray{
+    if (!_endEditArray) {
+        _endEditArray = @[@".",@"/",@".com",@".cn"];
+    }
+    return _endEditArray;
+}
 
 @end

@@ -30,10 +30,18 @@
     [self.view addSubview:_slideView];
     
     UITextField *textfield = [[UITextField alloc]initWithFrame:CGRectMake(10, 200, kScreenWidth - 20, 50)];
-    textfield.backgroundColor = [UIColor blueColor];
+    textfield.placeholder = @"请输入网址";
+    textfield.layer.borderWidth = 1;
+    textfield.layer.borderColor = UIColorFromRGB(0x999999).CGColor;
+    textfield.layer.cornerRadius = 4;
+    textfield.font = kFont(13);
+    textfield.textColor = UIColorFromRGB(0x666666);
+    textfield.clearButtonMode = UITextFieldViewModeWhileEditing;
     textfield.delegate = self;
     [self.view addSubview:textfield];
-    
+    UIView *leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, textfield.kheight)];
+    textfield.leftView = leftView;
+    textfield.leftViewMode = UITextFieldViewModeAlways;
     _slideView.textField = textfield;
 }
 #pragma mark--添加通知---
